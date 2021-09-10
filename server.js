@@ -65,7 +65,7 @@ mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true
 
 require('./app/routes/ingredient.router')(app);
 // Create a Server
-var server = app.listen(8080, function () {
+var server = app.listen(5000, function () {
     var host = server.address().address
     var port = server.address().port
 
