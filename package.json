@@ -17,5 +17,8 @@
     "node-monitor": "^0.3.11",
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
