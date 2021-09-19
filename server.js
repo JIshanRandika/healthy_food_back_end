@@ -15,6 +15,8 @@ const mongoose = require('mongoose');
 
 const Ingredient = require('./app/models/ingredient.model');
 
+const Product = require('./app/models/product.model')
+
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
@@ -42,7 +44,7 @@ mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true
         //     { ingredientName: 'HKE', status: 'Unknown', description: 'D15', alternate: 'A15', image: 'I15'},
         //
         // ]
-
+        //
         // for(let i=0; i<ingredients.length; i++){
         //
         //     const ingredient = new Ingredient({
@@ -58,12 +60,40 @@ mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true
         //     // Save a Ingredient in the MongoDB
         //     await ingredient.save();
         // }
+
+        // =================================================
+        // const products = [
+        //
+        //     { productName: 'P1', includedIngredients: 'ha,hb,hc,hd,uc,ub,ue'},
+        //     { productName: 'P2', includedIngredients: 'hkd,hb,ub,hkc,uc,hf,ue'},
+        //
+        //
+        // ]
+        //
+        //
+        // for(let i=0; i<products.length; i++){
+        //
+        //     const ingredient = new Product({
+        //         productName: products[i].productName,
+        //         includedIngredients: products[i].includedIngredients,
+        //
+        //
+        //     });
+        //
+        //     // Save a Ingredient in the MongoDB
+        //     await ingredient.save();
+        // }
+
+
+
+
     }).catch(err => {
     console.log('Could not connect to MongoDB.');
     process.exit();
 });
 
 require('./app/routes/ingredient.router')(app);
+require('./app/routes/product.router')(app);
 // Create a Server
 
 let port = process.env.PORT || 8080;

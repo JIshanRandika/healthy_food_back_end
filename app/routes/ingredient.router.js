@@ -9,7 +9,6 @@ module.exports = function(app) {
     app.get('/api/ingredients', ingredients.ingredients);
     app.get('/api/get', ingredients.get);
     app.post('/api/getsome', ingredients.ingredintget);
-
     app.post('/api/check', ingredients.ckeckIngredient);
 
 }

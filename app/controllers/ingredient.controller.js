@@ -58,6 +58,7 @@ exports.ingredintget = async(req, res) => {
 
         let ers=await Ingredient.find({ingredientName:ingredients[i]}).select(['ingredientName', 'status']);
         if(ers.length!=0){
+
             trueIngredients.push(ers[0]);
         }
     }
