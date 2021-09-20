@@ -64,8 +64,8 @@ mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true
         // =================================================
         // const products = [
         //
-        //     { productName: 'P1', includedIngredients: 'ha,hb,hc,hd,uc,ub,ue'},
-        //     { productName: 'P2', includedIngredients: 'hkd,hb,ub,hkc,uc,hf,ue'},
+        //     { name: 'P1', includedIngredients: 'ha,hb,hc,hd,uc,ub,ue'},
+        //     { name: 'P2', includedIngredients: 'hkd,hb,ub,hkc,uc,hf,ue'},
         //
         //
         // ]
@@ -74,7 +74,7 @@ mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true
         // for(let i=0; i<products.length; i++){
         //
         //     const ingredient = new Product({
-        //         productName: products[i].productName,
+        //         name: products[i].name,
         //         includedIngredients: products[i].includedIngredients,
         //
         //

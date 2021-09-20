@@ -26,7 +26,7 @@ exports.searchProduct = async(req, res) => {
     console.log(searchProductName);
     // let trueIngredients=[];
 
-    let ingredientList=await Product.find({productName:searchProductName}).select('includedIngredients');
+    let ingredientList=await Product.find({name:searchProductName}).select('includedIngredients');
 
     // for (let i = 0; i < ingredients.length; i++) {
     //
