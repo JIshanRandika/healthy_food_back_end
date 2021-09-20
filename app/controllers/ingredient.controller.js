@@ -56,7 +56,7 @@ exports.ingredintget = async(req, res) => {
     let trueIngredients=[];
     for (let i = 0; i < ingredients.length; i++) {
 
-        let ers=await Ingredient.find({ingredientName:ingredients[i]}).select(['ingredientName', 'status']);
+        let ers=await Ingredient.find({ingredientName:ingredients[i]}).select(['ingredientName', 'status','description']);
         if(ers.length!=0){
 
             trueIngredients.push(ers[0]);
@@ -75,7 +75,7 @@ exports.ckeckIngredient = async(req, res) => {
     let trueIngredients=[];
     for (let i = 0; i < ingredients.length; i++) {
 
-        let ers=await Ingredient.find({ingredientName:ingredients[i]}).select(['ingredientName', 'status']);
+        let ers=await Ingredient.find({ingredientName:ingredients[i]}).select(['ingredientName', 'status','description']);
         if(ers.length!=0){
             trueIngredients.push(ers[0]);
         }
